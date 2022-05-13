@@ -18,16 +18,16 @@ def pregunta_01():
     -------------------------------------------------------------------------------------
     """
     # Lea el archivo `insurance.csv` y asignelo al DataFrame `df`
-    df = ____
+    df = pd.read_csv('/content/insurance.csv')
 
     # Asigne la columna `charges` a la variable `y`.
-    ____ = ____
+    y = df['charges'].to_numpy()
 
     # Asigne una copia del dataframe `df` a la variable `X`.
-    ____ = ____.____(____)
+    X = df.copy()
 
     # Remueva la columna `charges` del DataFrame `X`.
-    ____.____(____)
+    X = X.drop(columns=['charges'])
 
     # Retorne `X` y `y`
     return X, y
