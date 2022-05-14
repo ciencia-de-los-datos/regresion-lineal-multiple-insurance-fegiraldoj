@@ -27,7 +27,7 @@ def pregunta_01():
     X = df.copy()
 
     # Remueva la columna `charges` del DataFrame `X`.
-    X = X.drop('charges', inplace=True)
+    X.drop('charges', inplace=True, axis=1)
 
     # Retorne `X` y `y`
     return X, y
